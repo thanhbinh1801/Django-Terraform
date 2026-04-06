@@ -27,5 +27,5 @@ USER 1000:1000
 # copy project
 COPY . .
 
-# run gunicorn
-CMD ["gunicorn", "app_django.wsgi:application", "--bind", "0.0.0.0:8000"]
+# run migrations and gunicorn
+CMD sh -c "python manage.py migrate && gunicorn app_django.wsgi:application --bind 0.0.0.0:8000"
