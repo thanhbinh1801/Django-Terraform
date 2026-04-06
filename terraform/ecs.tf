@@ -1,5 +1,6 @@
 resource "aws_ecr_repository" "app_repo" {
   name = "${var.project_name}-repository"
+  force_delete = true
 }
 
 resource "aws_ecs_cluster" "main" {
