@@ -15,9 +15,6 @@ Hệ thống được xây dựng trên nền tảng AWS với các thành phầ
 5.  **Amazon S3**: Lưu trữ các tệp tĩnh (static files) và tệp phương tiện (media files).
 6.  **GitHub Actions**: Luồng CI/CD tự động build, push image và cập nhật dịch vụ ECS mỗi khi có code mới.
 
-> [!TIP]
-> Để hiểu sâu hơn về luồng dữ liệu và các quy tắc bảo mật, vui lòng tham khảo [Tài liệu Kiến trúc chi tiết](architecture_diagram.md).
-
 ## 🛠️ Công nghệ Sử dụng (Tech Stack)
 
 -   **Backend**: Python, Django
