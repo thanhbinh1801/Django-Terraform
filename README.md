@@ -8,7 +8,7 @@ Dự án này cung cấp một quy trình tự động hóa hoàn chỉnh để 
 
 Hệ thống được xây dựng trên nền tảng AWS với các thành phần chính:
 
-1.  **VPC & Networking**: Mạng lưới được chia thành Public Subnets (cho ứng dụng) và Private Subnets (cho cơ sở dữ liệu) để tối ưu bảo mật.
+1.  **VPC & Networking**: Mạng lưới được chia thành Public Subnets (nơi container Django chạy và được truy cập trực tiếp qua Public IP trên cổng 8000) và Private Subnets (cho cơ sở dữ liệu) để tối ưu bảo mật. Việc không dùng ALB giúp đơn giản hóa hạ tầng và tiết kiệm chi phí cho các môi trường thử nghiệm.
 2.  **AWS ECS Fargate**: Chạy các container Docker của Django mà không cần quản lý máy chủ EC2.
 3.  **Amazon RDS (PostgreSQL)**: Cơ sở dữ liệu quan hệ được đặt trong khu vực riêng tư, chỉ cho phép kết nối từ ứng dụng.
 4.  **Amazon ECR**: Kho lưu trữ Docker Images cho ứng dụng.
